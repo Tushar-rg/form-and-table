@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everlytics Form</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        
+        <form class="myForm" name="myForm" action="/" method="get" onsubmit="return validateForm()">
+
+            <div class="input-unit">
+                <div class="label">
+                    <label for="source" class="label">Select your source :</label>
+                </div>
+                <div class="divider-line"></div>
+                <select name="source" id="source">
+                    <option value="google-cloud-storage">Google Cloud Storage</option>
+                </select>
+            </div>
+
+            <div class="input-unit">
+                <div class="label">
+                    <label for="pipeline-name">Provide a name for pipeline :</label>
+                </div>
+                <div class="divider-line"></div>
+                <input id="pipeline-name" name="pipeline-name" type="text"
+                    placeholder="eg., cust_shop_energy_gkateway001" autocomplete="off">  
+
+                <span class='formerror' id="pipeline-name-error">invalid input</span>
+            </div>
+
+
+            <div class="input-unit">
+                <div class="label">
+                    <label for="project-name">GCS Project name :</label>
+                </div>
+                <div class="divider-line"></div>
+                <input id="project-name" name="project-name" type="text" placeholder="project-id" autocomplete="off">
+                <span class='formerror' id="project-name-error">invalid input</span>
+            </div>
+
+            <div class="input-unit">
+                <div class="label">
+                    <label for="bucket-name">GCS Bucket name :</label>
+                </div>
+                <div class="divider-line"></div>
+                <input id="bucket-name" name="bucket-name" type="text" placeholder="gs://your-bucket" autocomplete="off">
+                <span class='formerror' id="bucket-name-error">invalid input</span>
+            </div>
+
+            <div class="input-unit">
+                <div class="label">
+                    <label for="gcs-files-location">Input Cloud Storage File(s) :</label>
+                </div>
+                <div class="divider-line"></div>
+                <input id="gcs-files-location" name="gcs-files-location" type="text"
+                    placeholder="GCS location of your files" autocomplete="off">
+                <span class='formerror directions' id="file-location-error">Example:gs://your-bucket/your-files/01.csv</span>
+            </div>
+
+            <div class="input-unit">
+                <div class="label">
+                    <label for="credentials">GCS credentials :</label>
+                </div>
+                <div class="divider-line"></div>
+                <input id="credentials" name="credentials" type="text" autocomplete="off">
+                <span class='formerror' id="credentials-error">invalid input</span>
+            </div>
+
+            <div class="input-unit">
+                <div class="label">
+                    <label for="run-every">Run Every :</label>
+                </div>
+                <div class="divider-line"></div>
+                <input id="run-every" name="run-every" type="text" placeholder="(in minutes)" autocomplete="off">
+                <span class='formerror' id="run-every-error">invalid input</span>
+            </div>
+
+            <div class="buttons">
+                <button type="submit" class="create button">Create</button>
+                <button class="cancel button" type="button" onClick="window.location.reload()">Cancel</button>
+            </div>
+
+        </form>
+    </div>
+    <script src="./validation.js"></script>
+</body>
+
+</html>

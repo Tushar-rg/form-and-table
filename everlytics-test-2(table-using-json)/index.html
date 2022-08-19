@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Data Table</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+    <table id="main-table" border="1">
+        <thead>
+        <tr>
+            <th>Machine Name</th>
+            <th>Machine ID</th>
+            <th class="large">Energy Consumed(kWh)<br><br><hr>
+                <table>
+                    <th class="nested">Today</th>
+                    <th class="nested">Mtd</th>
+                    <th class="nested">YTD</th>
+                </table>
+            </th>
+            <th>Active Power(mW)</th>
+            <th>Apparent Power</th>
+            <th>reactive Power</th>
+            <th>current (amps)</th>
+            <th>voltage (volts)</th>
+            <th>power factor</th>
+            <th class="large">idle time<br><br><hr>
+                <table>
+                    <th class="nested">Today</th>
+                    <th class="nested">Mtd</th>
+                    <th class="nested">YTD</th>
+                </table>
+            </th>
+        </tr>
+        </thead>
+        <tbody id="table">
+            <!-- getting dynamic data from json -->
+        </tbody>
+
+    </table>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
